@@ -17,10 +17,9 @@ fetch('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/book
 
   let bookLiteral = myJson.map(function(bookObject){
     return `<li>
+    <img src="https://raw.githubusercontent.com/benoitvallon/100-best-books/master/static/${bookObject.imageLink}"/>
     <p>${bookObject.title}</p>
-    <p> ${bookObject.language}</p>
-    <p> ${bookObject.year}</p>
-    <p> ${bookObject.pages}</p>
+    <p> ${bookObject.author}</p>
     </li>`
   })
   BookList.innerHTML = bookLiteral.join('')
